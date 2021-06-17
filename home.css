@@ -764,6 +764,10 @@ div:nth-of-type(6) .work{
         display: none;
     }
 
+    .divider-center{
+        margin: 0px;
+    }
+
     /*about me*/
     .aboutMe img:last-child{
         display: none;
@@ -830,6 +834,10 @@ div:nth-of-type(6) .work{
 
     .menu-item > div{
         text-align: left;
+    }
+
+    .menu-item:hover{
+        height: fit-content;
     }
 
     /*cursor*/

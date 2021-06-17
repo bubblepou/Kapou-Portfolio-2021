@@ -274,7 +274,7 @@ span{
 
 .menu-tag{
     display: inline-block;
-    padding: 0px 15px;
+    padding: 5px 15px;
     border: 1px solid #DD8181;
     border-radius: 32px;
     font-size: 20px;
@@ -369,6 +369,11 @@ span{
 
 
 @media (max-width: 414px){
+
+    .popo-body{
+        background-image: none;
+    }
+
     .popo-close-btn{
         height: 20px;
         top:20px;
@@ -412,7 +417,7 @@ span{
 
     .menu-tag{
         font-size: 16px;
-        padding: 0px 10px;
+        padding: 5px 10px;
     }
 
     .menu-me p{
@@ -499,9 +504,14 @@ span{
         text-align: left;
     }
 
+    .menu-item:hover{
+        height: fit-content;
+    }
+
     .stone{
         margin-top: 80px;
     }
+    
 
     /*cursor*/
 
