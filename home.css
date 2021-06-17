@@ -601,6 +601,10 @@ div:nth-of-type(6) .work{
 
 @media (max-width: 414px){
 
+    .popo-body{
+        background-image: none;
+    }
+
     /*top*/
     .chest{
         width: 200px;
@@ -826,6 +830,12 @@ div:nth-of-type(6) .work{
 
     .menu-item > div{
         text-align: left;
+    }
+
+    /*cursor*/
+
+    #cursor{
+        display: none;
     }
 
 }

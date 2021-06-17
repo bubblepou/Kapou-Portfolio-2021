@@ -1,6 +1,7 @@
 *{
     margin: 0;
     box-sizing: border-box;
+    cursor: none;
 }
 
 .popo-body{
@@ -371,7 +372,7 @@ span{
     .popo-close-btn{
         height: 20px;
         top:20px;
-        right: 20px;
+        left: 20px;
     }
 
     /*文字*/
@@ -403,6 +404,23 @@ span{
 
     .talk-mark{
         height: 80px;
+    }
+
+    .menu-title{
+        font-size: 35px;
+    }
+
+    .menu-tag{
+        font-size: 16px;
+        padding: 0px 10px;
+    }
+
+    .menu-me p{
+        font-size: 16px;
+    }
+
+    .menu-me > h2{
+        font-size: 24px;
     }
 
     /*intro*/
@@ -483,5 +501,11 @@ span{
 
     .stone{
         margin-top: 80px;
+    }
+
+    /*cursor*/
+
+    #cursor{
+        display: none;
     }
 }
