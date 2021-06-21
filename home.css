@@ -615,7 +615,17 @@ div:nth-of-type(6) .work{
         flex-direction: column;
         align-items: center;
         text-align: center;
-        margin-top: 50px !important;
+    }
+
+    @keyframes p-fade-in {
+        from {
+          opacity: 0;
+          margin-top: 0px;
+        }
+        to {
+          opacity: 1;
+          margin-top: 50px;
+        }
     }
 
     .TopFont{
@@ -684,6 +694,9 @@ div:nth-of-type(6) .work{
     }
 
     /*work*/
+    .dividerStone{
+        height: 20px;
+    }
 
     .divider > div:first-child{
         display: none;
