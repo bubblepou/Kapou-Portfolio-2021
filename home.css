@@ -125,7 +125,7 @@ span{
 /*刪*/
 
 .divider-center{
-    display: inline-flex;
+    display: inline-block;
     align-items: center;
     margin: 0 50px;
 }
