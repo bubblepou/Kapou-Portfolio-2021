@@ -22,6 +22,11 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
 
+
+    <script src="//code.jquery.com/jquery-3.3.1.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+    <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+
 </head>
 
 <body class="popo-body">
@@ -36,7 +41,7 @@
         </div>
         <h5 class="TopFont">世界上每一顆寶石<br>
             都是獨一無二且充滿魅力的，<br>
-            就像我們與我們的作品。</h5>
+            寶石般的作品與我。</h5>
     </div>
     <div class="circle"></div>
 
@@ -151,7 +156,7 @@
         </div>
     </div>
 
-    <div class="work_item" data-aos="fade-down">
+    <div class="work_item" data-aos="fade-down" id="other">
         <div class='divider'>
             <div><img src="./stone/divider.png"></div>
             <div class="divider-center">
@@ -168,11 +173,31 @@
             </div>
             <h2 class="title">其他作品</h2>
             <div class="owl-carousel owl-theme popo-carousel">
-                <div class="item"><img src="./mockup/other/1.png"></div>
-                <div class="item"><img src="./mockup/other/5.png"></div>
-                <div class="item"><img src="./mockup/other/2.png"></div>
-                <div class="item"><img src="./mockup/other/3.png"></div>
-                <div class="item"><img src="./mockup/other/4.png"></div>
+                <div class="item">
+                    <a href="./mockup/other/1.png" data-fancybox="gallery" class="gallery">
+                        <img src="./mockup/other/1.png">
+                    </a>
+                </div>
+                <div class="item">
+                    <a href="./mockup/other/5.png" data-fancybox="gallery" class="gallery">
+                        <img src="./mockup/other/5.png">
+                    </a>
+                </div>
+                <div class="item">
+                    <a href="./mockup/other/2.png" data-fancybox="gallery" class="gallery">
+                        <img src="./mockup/other/2.png">
+                    </a>
+                </div>
+                <div class="item">
+                    <a href="./mockup/other/3.png" data-fancybox="gallery" class="gallery">
+                        <img src="./mockup/other/3.png">
+                    </a>
+                </div>
+                <div class="item">
+                    <a href="./mockup/other/4.png" data-fancybox="gallery" class="gallery">
+                        <img src="./mockup/other/4.png">
+                    </a>
+                </div>
             </div>
 
             <!--<div class="popo-nav">
@@ -222,9 +247,9 @@
             <div>
                 <h5 class="mockupFont tag">技能</h5>
                 <p class="mockupFont">
-                    熟練｜PS．AI．ID．Excel<br>
-                    中等｜HTML．CSS．Figma<br>
-                    普通｜PR．AE．Python
+                    美術與設計｜PS．AI．ID．Figma<br>
+                    網頁與編程｜HTML．CSS．Python<br>
+                    其他｜PR．AE．Excel
                 </p>
             </div>
             <div>
@@ -235,12 +260,11 @@
                 </p>
             </div>
             <h2 class="title">kapouwork@gmail.com</h2>
-            <img src="./stone/divider2.png">
         </div>
     </div>
 
     <div class="menu-btn">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 103 66" class="menu" alt="menu">
+        <a><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 103 66" class="menu" alt="menu">
             <defs>
                 <style>
                     .cls-1 {
@@ -262,8 +286,8 @@
                     <line class="cls-1" x1="27" y1="33" x2="100" y2="33" />
                 </g>
             </g>
-        </svg>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 69.25 69.25" class="menu-close" alt="close">
+        </svg></a>
+        <a><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 69.25 69.25" class="menu-close" alt="close">
             <defs>
                 <style>
                     .cls-1 {
@@ -284,7 +308,7 @@
                     <line class="cls-1" x1="3" y1="66.25" x2="66.25" y2="3" />
                 </g>
             </g>
-        </svg>
+        </svg></a>
     </div>
 
     <div class="menu-open">
@@ -343,10 +367,11 @@
                         <img src="./mockup/news_1.png">
                     </div>
                 </a>
-                <a href="./echoo.html">
+                <a href="#other" id="otherBtn">
                     <div class="menu-item">
                         <div>
-                            <h5 class="menu-tag">海報</h5>
+                            <h5 class="menu-tag">插畫</h5>
+                            <h5 class="menu-tag">標準字</h5>
                             <h2 class="menu-title">其他作品</h2>
                         </div>
                         <img src="./mockup/other/1.png">
@@ -356,9 +381,9 @@
         </div>
     </div>
 
-    <div id="cursor">
+    <!--div id="cursor">
         <div></div>
-    </div>
+    </div-->
 
     <script src="./OwlCarousel/jquery.min.js"></script>
     <script src="./OwlCarousel/owl.carousel.min.js"></script>
@@ -392,6 +417,22 @@
             $('.menu').css('opacity', '1');
             $('.menu').css('z-index', '10');
         });
+
+        $('#otherBtn').click(function () {
+            $('.menu-open').css('left', '100%');
+            $('.menu-close').css('opacity', '0');
+            $('.menu-close').css('z-index', '9');
+            $('.menu').css('opacity', '1');
+            $('.menu').css('z-index', '10');
+        });
+
+        $('#otherBtn').click(function () {
+            $('.menu-open').css('left', '100%');
+            $('.menu-close').css('opacity', '0');
+            $('.menu-close').css('z-index', '9');
+            $('.menu').css('opacity', '1');
+            $('.menu').css('z-index', '10');
+        });
     </script>
 
     <script>
@@ -403,7 +444,13 @@
                 cursor.style.top = event.clientY - 10 + "px";
             }
         };
+    </script>
 
+    <script>
+        var defaults = {
+            infobar: false,
+            toolbar : false,
+        }
     </script>
 </body>
 

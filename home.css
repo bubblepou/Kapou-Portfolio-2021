@@ -1,7 +1,6 @@
 *{
     margin: 0;
     box-sizing: border-box;
-    cursor: none;
 }
 
 .popo-body{
@@ -13,6 +12,7 @@
 
 a{
     text-decoration:none !important;
+    cursor: pointer;
 }
 
 /*Font*/
@@ -290,14 +290,11 @@ div:nth-of-type(6) .work{
 
 /* owlcarousel */
 .item{
-    display: flex !important;
-    align-items: center;
-    justify-content: center;
     height: 300px;
     overflow: hidden;
 }
 
-.item img{
+.item > img{
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -305,7 +302,27 @@ div:nth-of-type(6) .work{
     transition-timing-function:ease-out;
 }
 
-.item:hover img{
+.item > a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+.gallery > img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition-duration: 0.5s;
+    transition-timing-function:ease-out;
+}
+
+.gallery:hover > img{
+    height: 110% !important;
+}
+
+.item:hover > img{
     height: 110% !important;
 }
 
@@ -332,6 +349,15 @@ div:nth-of-type(6) .work{
     margin-top: 80px;
 }
 
+.fancybox-infobar{
+    display: none;
+}
+
+.fancybox-toolbar{
+    display: none;
+}
+
+
 /* About me */
 .work_item:last-of-type{
     position: relative;
@@ -346,6 +372,10 @@ div:nth-of-type(6) .work{
 }
 
 .aboutMe div:last-of-type{
+    margin-bottom: 150px;
+}
+
+.aboutMe h2:last-of-type{
     margin-bottom: 150px;
 }
 
@@ -457,7 +487,7 @@ div:nth-of-type(6) .work{
     flex-direction:column;
     align-items: flex-end;
     margin-right: 150px;
-    margin-top: calc(-92vh);
+    margin-top: calc(-100vh + 50px);
 
 }
 
@@ -489,7 +519,7 @@ div:nth-of-type(6) .work{
     margin: 0 auto;
 }
 
-/* cursor */
+/* cursor 
 
 #cursor{
     position: fixed;
@@ -504,7 +534,8 @@ div:nth-of-type(6) .work{
     border-radius: 50%;
     position: fixed;
     z-index:99;
-}
+}*/
+
 
 /*rwd*/
 
@@ -782,10 +813,6 @@ div:nth-of-type(6) .work{
     }
 
     /*about me*/
-    .aboutMe img:last-child{
-        display: none;
-    }
-
     .aboutMe h2:last-of-type{
         font-size: 26px;
         font-weight: 100;
