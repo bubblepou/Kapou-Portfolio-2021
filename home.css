@@ -3,11 +3,16 @@
     box-sizing: border-box;
 }
 
+:root {
+    --background-color:#fffaf6;
+    --normal-color:#6b6b6b;
+    --primary-color:#ea9a43;
+    --tag-color:#f6c25b;
+    --sub-color:#b79f90;
+}
+
 .popo-body{
-    background-color: #FFF8F1;
-    background-image: url('./key_pattern.png');
-    background-repeat: repeat;
-    background-blend-mode:soft-light ;
+    background-color: var(--background-color);
 }
 
 a{
@@ -48,7 +53,7 @@ span{
     font-family: 'Noto Sans TC', sans-serif;
     font-weight: 100;
     writing-mode:vertical-rl;
-    color: #575D67;
+    color: var(--normal-color);
 }
 
 .place{
@@ -138,7 +143,7 @@ span{
     display: inline-block;
     font-family: 'Noto Serif TC', 'Noto Sans TC', sans-serif;
     font-weight: 100;
-    color: #b79f90;
+    color: var(--sub-color);
 }
 
 .divider span{
@@ -196,20 +201,20 @@ body > div:nth-of-type(3){
     font-size: 62px;
     font-family: 'Noto Serif', 'Noto Serif TC', serif;
     font-weight: 600;
-    color: #DD8181;
+    color: var(--primary-color);
 }
 
 .mockupFont{
     font-family: 'Noto Sans TC', sans-serif;
     font-weight: 300;
-    color: #575D67;
+    color: var(--normal-color);
 }
 
 .tag{
     display: inline-block;
-    color: #73a2c3;
+    color: var(--tag-color);
     padding: 0 15px;
-    border: 1px solid #73a2c3;
+    border: 1px solid var(--tag-color);
     border-radius: 32px;
     background-color: white;
 }
@@ -350,10 +355,10 @@ div:nth-of-type(6) .work{
     width: 50px;
     height: 50px;
     border-radius: 100%;
-    border: 1px solid #AEA1C3;
+    border: 1px solid var(--sub-color);
     margin:10px;
-    color: #AEA1C3;
-    background-color: #FDFDFD;
+    color: var(--sub-color);
+    background-color:white;
 }
 
 .popo-nav{
@@ -387,35 +392,30 @@ div:nth-of-type(6) .work{
     text-align:center;
 }
 
-.aboutMe div{
-    margin: 80px 0;
-}
-
-.aboutMe div:last-of-type{
-    margin-bottom: 150px;
+.aboutMe > div{
+    margin: 100px 0;
 }
 
 .aboutMe h2:last-of-type{
     margin-bottom: 150px;
 }
 
-.aboutMe img{
-    margin: 150px 0;
+.po-icon{
+    height: 150px;
+    margin-bottom: 40px;
 }
 
-.decor{
-    position: absolute;
-    z-index: -1;
+.three-boxes > div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-.decor:first-of-type{
-    left: 0;
+.three-boxes{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
 }
-
-.decor:nth-of-type(2){
-    right:0;
-}
-
 
 /*menu*/
 
@@ -427,7 +427,7 @@ div:nth-of-type(6) .work{
     display: block;
     top:0;
     left: 100%;
-    background-color: #FFF8F1;
+    background-color: var(--background-color);
     transition: all 1s;
     z-index: 5;
 }
@@ -442,7 +442,12 @@ div:nth-of-type(6) .work{
     z-index: 10;
 }
 
-.cls-1{
+.cls-1 {
+    fill: none;
+    stroke: var(--normal-color);
+    stroke-linecap: round;
+    stroke-miterlimit: 10;
+    stroke-width: 6px;
     transition: all 0.2s;
 }
 
@@ -471,7 +476,7 @@ div:nth-of-type(6) .work{
 
 .menu-item{
     height: 170px;
-    color: #DD8181;
+    color: var(--primary-color);
     display: flex;
     margin-bottom: 50px;
     transition: all 1s ease-out;
@@ -495,11 +500,12 @@ div:nth-of-type(6) .work{
 .menu-tag{
     display: inline-block;
     padding: 0px 15px;
-    border: 1px solid #DD8181;
+    border: 1px solid var(--primary-color);
     border-radius: 32px;
     font-size: 20px;
     font-family: 'Noto Sans TC', sans-serif;
     font-weight: 100;
+    background: white;
 }
 
 .menu-items{
@@ -522,7 +528,7 @@ div:nth-of-type(6) .work{
     flex-direction: column;
     justify-content: space-around;
     flex-shrink: 0;
-    color: #DD8181;
+    color: var(--normal-color);
     text-align: right;
     line-height: 200%;
 }
@@ -531,7 +537,6 @@ div:nth-of-type(6) .work{
     font-size: 20px;
     font-family: 'Noto Sans TC', sans-serif;
     font-weight: 300;
-    color: #DD8181;
 }
 
 .menu-me img{
@@ -643,10 +648,6 @@ div:nth-of-type(5) .work p {
     width: 210px;
 }
 
-.decor{
-    height: 70%;
-}
-
 
 /*menu*/
 .menu{
@@ -752,8 +753,16 @@ div:nth-of-type(5) .work div:first-child {
     width: 220px !important;
 }
 
-.decor{
-    display: none;
+.po-icon{
+    height: 120px;
+}
+
+.three-boxes{
+    flex-direction: column;
+}
+
+.three-boxes > div:nth-child(2){
+    margin: 100px 0 ;
 }
 
 }
@@ -924,24 +933,18 @@ div:nth-of-type(5) .work div:first-child {
     width: 220px !important;
 }
 
-.decor{
-    display: none;
-}
-
 .divider-center{
     margin: 0px;
 }
 
 /*about me*/
+
 .aboutMe h2:last-of-type{
     font-size: 26px;
     font-weight: 100;
     margin: 80px 0;
 }
 
-.aboutMe div:last-of-type{
-    margin-bottom: 80px;
-}
 
 /*menu*/
 
@@ -1004,6 +1007,18 @@ div:nth-of-type(5) .work div:first-child {
 
 #cursor{
     display: none;
+}
+
+.po-icon{
+    height: 120px;
+}
+
+.three-boxes{
+    flex-direction: column;
+}
+
+.three-boxes > div:nth-child(2){
+    margin: 80px 0 ;
 }
 
 }

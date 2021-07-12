@@ -4,11 +4,16 @@
     /*cursor: none;*/
 }
 
+:root {
+    --background-color:#fffaf6;
+    --normal-color:#6b6b6b;
+    --primary-color:#ea9a43;
+    --tag-color:#f6c25b;
+    --sub-color:#b79f90;
+}
+
 .popo-body{
-    background-color: #FFF8F1;
-    background-image: url('./key_pattern.png');
-    background-repeat: repeat;
-    background-blend-mode:soft-light ;
+    background-color: var(--background-color);
 }
 
 a{
@@ -78,7 +83,7 @@ span{
 .mockupFont{
     font-family: 'Noto Sans TC', sans-serif;
     font-weight: 300;
-    color: #575D67;
+    color: var(--normal-color);
 }
 
 .title{
@@ -86,14 +91,14 @@ span{
     font-family: 'Noto Serif', 'Noto Serif TC', serif;
     font-weight: 700;
     /*font-style: italic;*/
-    color: #DD8181;
+    color: var(--primary-color);
 }
 
 .tag{
     display: inline-block;
-    color: #73a2c3;
+    color: var(--tag-color);
     padding: 10px 20px;
-    border: 1px solid #73a2c3;
+    border: 1px solid var(--tag-color);
     border-radius: 32px;
     background-color: white;
 }
@@ -134,7 +139,7 @@ span{
     font-family: 'Noto Serif', 'Noto Serif TC', serif;
     font-weight: 700;
     font-style: italic;
-    color: #575D67;
+    color: var(--normal-color);
 }
 
 .intro *{
@@ -152,7 +157,7 @@ span{
     font-family: 'Noto Sans TC', sans-serif;
     font-size: 20px;
     font-weight: 300;
-    color: #73a2c3;
+    color: var(--tag-color);
 }
 
 .outside-link a::before{
@@ -162,7 +167,7 @@ span{
     bottom: -2px;
     width: 100%;
     height: 1px;
-    background-color: #73a2c3;
+    background-color: var(--tag-color);
     transition: all 0.3s ease-out;
 }
 
@@ -171,7 +176,7 @@ span{
 }
 
 .outside-link a:hover{
-    color:#73a2c3;
+    color:var(--tag-color);
 }
 
 /*圖*/
@@ -195,7 +200,7 @@ span{
 .stone{
     display: block;
     height: 80px;
-    margin: 0 auto 100px auto;
+    margin: 100px auto;
 }
 
 /*menu*/
@@ -222,7 +227,7 @@ span{
     display: block;
     top:0;
     left: 100%;
-    background-color: #FFF8F1;
+    background-color: var(--background-color);
     transition: all 1s;
     z-index: 5;
 }
@@ -237,7 +242,12 @@ span{
     z-index: 10;
 }
 
-.cls-1{
+.cls-1 {
+    fill: none;
+    stroke: var(--normal-color);
+    stroke-linecap: round;
+    stroke-miterlimit: 10;
+    stroke-width: 6px;
     transition: all 0.2s;
 }
 
@@ -266,7 +276,7 @@ span{
 
 .menu-item{
     height: 170px;
-    color: #DD8181;
+    color: var(--primary-color);
     display: flex;
     margin-bottom: 50px;
     transition: all 1s ease-out;
@@ -290,7 +300,7 @@ span{
 .menu-tag{
     display: inline-block;
     padding: 5px 15px;
-    border: 1px solid #DD8181;
+    border: 1px solid var(--primary-color);
     border-radius: 32px;
     font-size: 20px;
     font-family: 'Noto Sans TC', sans-serif;
@@ -317,7 +327,7 @@ span{
     flex-direction: column;
     justify-content: space-around;
     flex-shrink: 0;
-    color: #DD8181;
+    color: var(--normal-color);
     text-align: right;
     line-height: 200%;
 }
@@ -326,7 +336,6 @@ span{
     font-size: 20px;
     font-family: 'Noto Sans TC', sans-serif;
     font-weight: 300;
-    color: #DD8181;
 }
 
 .menu-me img{
